@@ -31,10 +31,10 @@ searchBar.addEventListener("keypress", (e) => {
 async function searchWeather() {
   const location = searchBar.value.trim();
 
-
   showLoading(true);
   hideError();
   hideWeatherCard();
+  clearInput()
   try {
     const url = `${BASE_URL}/${encodeURIComponent(
       location
@@ -46,7 +46,6 @@ async function searchWeather() {
     }
 
     const data = await response.json();
-    console.log(data);
     displayWeather(data);
   } catch (e) {
     console.log(e);
@@ -127,4 +126,8 @@ function showLoading(show){
     else{
         loading.classList.remove('show')
     }
+}
+
+function clearInput(){
+    searchBar.value='';
 }
