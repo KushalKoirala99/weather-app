@@ -1,21 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="stylesheet" href="./style.css" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
-</head>
-<body>
-      <header>
-        <h1>SkyCast</h1>
+  </head>
+  <body>
+    <header>
+      <h1>SkyCast</h1>
     </header>
-     <div class="main">
-        <div class="search-container">
-            <input type="text" id="searchBar" placeholder="Enter a location (e.g., New York, London)">
-            <button type="button" class="search-btn" onclick="searchWeather()" >Search</button>
+    <div class="main">
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchBar"
+          placeholder="Enter a location (e.g., New York, London)"
+        />
+        <button type="button" class="search-btn" onclick="searchWeather()">
+          Search
+        </button>
+      </div>
+
+      <div class="loading" id="loading">Fetching weather data...</div>
+
+      <div class="error-message" id="errorMessage"></div>
+
+      <div class="weather-card" id="weatherCard">
+        <div class="location-info">
+          <div class="location-name" id="locationName"></div>
+          <div class="current-date" id="currentDate"></div>
         </div>
-     </div>
-     <script src="main.js"></script>
-</body>
+
+        <div class="weather-main">
+          <div class="temperature" id="temperature"></div>
+          <div class="weather-icon" id="weatherIcon"></div>
+        </div>
+
+        <div class="weather-description" id="weatherDescription"></div>
+
+        <div class="weather-details">
+          <div class="detail-item">
+            <div class="detail-label">Feels Like</div>
+            <div class="detail-value" id="feelsLike"></div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">Humidity</div>
+            <div class="detail-value" id="humidity"></div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">Wind Speed</div>
+            <div class="detail-value" id="windSpeed"></div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">Visibility</div>
+            <div class="detail-value" id="visibility"></div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">UV Index</div>
+            <div class="detail-value" id="uvIndex"></div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">Pressure</div>
+            <div class="detail-value" id="pressure"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>

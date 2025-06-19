@@ -15,8 +15,6 @@ searchBar.addEventListener('keypress', (e)=> {
 async function searchWeather(){
     const location = searchBar.value.trim();
 
-
-
 try {
 const url = `${BASE_URL}/${encodeURIComponent(location)}?unitGroup=metric&key=${API_KEY}&contentType=json`;
 const response = await fetch(url);
@@ -34,4 +32,8 @@ displayWeather(data);
 }
 
 function displayWeather(data){
+    const current = data.currentConditions;
+    const today = data.days[0];
+
+    
 }
