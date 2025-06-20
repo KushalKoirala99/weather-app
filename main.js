@@ -3,7 +3,7 @@ const weatherCard = document.getElementById("weatherCard");
 const errorMessage = document.getElementById("errorMessage");
 const loading = document.getElementById("loading");
 
-const API_KEY = "3SNK35PV53ZPWKQ4WX4HFVRGV";
+
 const BASE_URL =
   "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline";
 
@@ -36,7 +36,7 @@ async function searchWeather() {
   hideWeatherCard();
   clearInput()
   try {
-    const url = `${BASE_URL}/${encodeURIComponent(
+    const url = `/.netlify/functions/get-weather?location=${encodeURIComponent(
       location
     )}?unitGroup=metric&key=${API_KEY}&contentType=json`;
     const response = await fetch(url);
