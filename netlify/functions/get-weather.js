@@ -2,6 +2,7 @@ const fetch = require('node-fetch')
 
 exports.handler =  async function (e) {
     const API_KEY = process.env.VISUAL_CROSSING_KEY;
+    console.log('API_KEY is:', process.env.VISUAL_CROSSING_KEY);
 
     const location = e.queryStringParameters.location;
 
