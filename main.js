@@ -38,7 +38,7 @@ async function searchWeather() {
   try {
     const url = `/.netlify/functions/get-weather?location=${encodeURIComponent(
       location
-    )}?unitGroup=metric&key=${API_KEY}&contentType=json`;
+    )}`;
     const response = await fetch(url);
 
     if (!response.ok) {
