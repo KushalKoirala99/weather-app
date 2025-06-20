@@ -1,4 +1,3 @@
-const fetch = require('node-fetch')
 
 exports.handler =  async function (e) {
     const API_KEY = process.env.VISUAL_CROSSING_KEY;
