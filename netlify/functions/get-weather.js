@@ -12,7 +12,7 @@ exports.handler =  async function (e) {
             body: JSON.stringify({error: 'Missing location parameter'})
         }
     }
-}
+
 
  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${encodeURIComponent(
     location
