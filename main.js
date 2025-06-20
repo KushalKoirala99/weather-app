@@ -4,9 +4,6 @@ const errorMessage = document.getElementById("errorMessage");
 const loading = document.getElementById("loading");
 
 
-const BASE_URL =
-  "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline";
-
 const weatherIcons = {
   "clear-day": "☀️",
   "clear-night": "🌙",
