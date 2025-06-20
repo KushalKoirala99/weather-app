@@ -16,7 +16,7 @@ exports.handler =  async function (e) {
 
  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${encodeURIComponent(
     location
-  )}?unitGroup=metric&key=${API_KEY}&contentType=json`;
+  )}`;
 
   try {
     const response = await fetch(url);
